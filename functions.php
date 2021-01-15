@@ -38,5 +38,17 @@ function largest($array): int {
  * @return array - the array without any duplicates in it
  */
 function removeDups($array): array {
-	return array_unique($array);
+	return array_unique($array, SORT_NUMERIC);
+}
+
+/**
+ * takes an array as a parameter and returns an associative array with each value from the original array, and the
+ * number of times that value occurs in the original array
+ * @param $array - array that gets passed in
+ * @return array - associate array
+ */
+function distribution($array): array {
+	$array = array_count_values($array);
+	ksort($array, SORT_NUMERIC);
+	return $array;
 }

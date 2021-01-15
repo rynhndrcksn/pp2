@@ -25,24 +25,30 @@ require ('functions.php');
 </head>
 <body>
 	<h1>Pair Program 2</h1>
-
 	<?php
-		echo '<h2>PHP Array Practice!</h2>';
+	echo '<h2>PHP Array Practice!</h2>';
 
-		// create a $numbers array to manipulate
-		$numbers = array(7, 9, 8, 9, 8, 8, 6);
+	// create a $numbers array to manipulate
+	$numbers = array(7, 9, 8, 9, 8, 8, 6);
 
-		// use our new function to print our $numbers array
-		printArr($numbers);
+	// use our new function to print our $numbers array
+	printArr($numbers);
 
-		// print the largest number in the array
-		echo '<p>The largest number in our array is: ' . largest($numbers) . '</p>';
+	// print the largest number in the array
+	echo '<p>The largest number in our array is: ' . largest($numbers) . '</p>';
 
-		// remove duplicate numbers and prove it
-		$numbers = removeDups($numbers);
-		echo '<p>We have removed all duplicate numbers: ';
-		printArr($numbers);
+	// remove duplicate numbers and prove it
+	$numbers2 = $numbers;
+	$numbers = removeDups($numbers);
+	echo '<p>We have removed all duplicate numbers: ';
+	printArr($numbers);
 
+	// combines multiple elements into 1 via associative array
+	echo '<p>Here we will var dump the array after turning it into an associate array:';
+	$numbers2 = distribution($numbers2);
+	echo '<pre>';
+	var_dump($numbers2);
+	echo '</pre>';
 
 	?>
 </body>
