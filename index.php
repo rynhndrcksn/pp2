@@ -10,6 +10,8 @@
 // error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+require ('functions.php');
 ?>
 
 <!doctype html>
@@ -28,15 +30,6 @@ error_reporting(E_ALL);
 		echo '<h2>PHP Array Practice!</h2>';
 
 		$numbers = array(7, 9, 8, 9, 8, 8, 6);
-
-	/** prints a 1-d array using a foreach loop
-	 * @param $array - an array that gets passed in to be printed
-	 */
-		function printArr($array) {
-			foreach ($array as $item) {
-				echo "<p>$item</p>";
-			}
-		}
 
 		printArr($numbers);
 	?>
