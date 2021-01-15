@@ -29,11 +29,21 @@ require ('functions.php');
 	<?php
 		echo '<h2>PHP Array Practice!</h2>';
 
+		// create a $numbers array to manipulate
 		$numbers = array(7, 9, 8, 9, 8, 8, 6);
 
+		// use our new function to print our $numbers array
 		printArr($numbers);
 
+		// print the largest number in the array
 		echo '<p>The largest number in our array is: ' . largest($numbers) . '</p>';
+
+		// remove duplicate numbers and prove it
+		$numbers = removeDups($numbers);
+		echo '<p>We have removed all duplicate numbers: ';
+		printArr($numbers);
+
+
 	?>
 </body>
 </html>

@@ -7,7 +7,8 @@
  * description: php file that contains all of our php functions for index.php
  */
 
-/** prints a 1-d array using a foreach loop
+/**
+ * prints a 1-d array using a foreach loop
  * @param $array - an array that gets passed in to be printed
  */
 function printArr($array) {
@@ -16,11 +17,12 @@ function printArr($array) {
 	}
 }
 
-/** finds the largest number in an array and prints it
+/**
+ * finds the largest number in an array and prints it
  * @param $array - an array that gets passed in so we can find the largest number in it
  * @return int - largest number in the array
  */
-function largest($array) {
+function largest($array): int {
 	$max = PHP_INT_MIN;
 	foreach ($array as $item) {
 		if ($item > $max) {
@@ -28,4 +30,13 @@ function largest($array) {
 		}
 	}
 	return $max;
+}
+
+/**
+ * removes all duplicates from the array that's passed in using array_unique()
+ * @param $array - array that gets passed in so we can remove the duplicates from it
+ * @return array - the array without any duplicates in it
+ */
+function removeDups($array): array {
+	return array_unique($array);
 }
