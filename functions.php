@@ -15,3 +15,17 @@ function printArr($array) {
 		echo "<p>$item</p>";
 	}
 }
+
+/** finds the largest number in an array and prints it
+ * @param $array - an array that gets passed in so we can find the largest number in it
+ * @return int - largest number in the array
+ */
+function largest($array) {
+	$max = PHP_INT_MIN;
+	foreach ($array as $item) {
+		if ($item > $max) {
+			$max = $item;
+		}
+	}
+	return $max;
+}
